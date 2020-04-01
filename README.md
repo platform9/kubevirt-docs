@@ -136,8 +136,9 @@ spec:
 - With VNC:
   - If VNC is not enabled yet
     - `kubectl apply -f kubevirt/vnc/vnc.yaml`
-  - Look up service nodeport
-  - Access VMs at NODE_IP:NODEPORT
+  - Look up VNC service nodeport
+  - Access VMs at http://NODE_IP:NODEPORT/?namespace=VM_NAMESPACE
+    - Only VMs under the namespace `VM_NAMESPACE` will be shown. Choose the namespace that your desired VM is under.
 
 ## Test CDI
 - Make sure to fill out all the variables in the DataVolume/VM manifests to suit your environment before applying
@@ -175,6 +176,6 @@ kubectl -n kubevirt patch kv kubevirt --type=json -p '[{ "op": "remove", "path":
 ## References
 - [https://kubevirt.io/user-guide/#/installation/installation](https://kubevirt.io/user-guide/#/installation/installation)
 - [https://github.com/kubevirt/containerized-data-importer](https://github.com/kubevirt/containerized-data-importer)
-
+- [https://kubevirt.io/2019/Access-Virtual-Machines-graphic-console-using-noVNC.html](https://kubevirt.io/2019/Access-Virtual-Machines-graphic-console-using-noVNC.html)
 ## Author
 - Platform9 SE Clement Liaw [@iExalt](https://github.com/iExalt)
