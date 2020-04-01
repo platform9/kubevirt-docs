@@ -175,3 +175,6 @@ kubectl -n kubevirt patch kv kubevirt --type=json -p '[{ "op": "remove", "path":
 ## References
 - [https://kubevirt.io/user-guide/#/installation/installation](https://kubevirt.io/user-guide/#/installation/installation)
 - [https://github.com/kubevirt/containerized-data-importer](https://github.com/kubevirt/containerized-data-importer)
+
+## Author
+- Platform9 SE Clement Liaw [@iExalt](https://github.com/iExalt)
