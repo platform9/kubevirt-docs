@@ -173,7 +173,7 @@ kubectl -n kubevirt patch kv kubevirt --type=json -p '[{ "op": "remove", "path":
   - Changing the flag requires a deployment restart
 - Ensure that the service selector correctly targets the VM pod
 - Check that the Docker MTU and CNI plugin MTU are appropriate for your network
-- Use `virtctl console $VM_NAME_HERE` to ensure that VM has started and is ready for SSH logins
+- Use `kubectl virt console $VM_NAME_HERE` to ensure that VM has started and is ready for SSH logins
 
 ## References
 - [https://kubevirt.io/user-guide/#/installation/installation](https://kubevirt.io/user-guide/#/installation/installation)
