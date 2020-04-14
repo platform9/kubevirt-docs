@@ -169,6 +169,8 @@ kubectl -n kubevirt patch kv kubevirt --type=json -p '[{ "op": "remove", "path":
 
 ## Troubleshooting
 - Ensure that Kubernetes has enough spare CPU/RAM to deploy your requested VM
+- Ensure that hardware virtualization is supported and available, or that the software virtualization flag is present in the ConfigMap
+  - Changing the flag requires a deployment restart
 - Ensure that the service selector correctly targets the VM pod
 - Check that the Docker MTU and CNI plugin MTU are appropriate for your network
 - Use `virtctl console $VM_NAME_HERE` to ensure that VM has started and is ready for SSH logins
