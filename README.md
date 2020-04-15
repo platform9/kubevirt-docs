@@ -15,6 +15,7 @@
 
 - Run `kubevirt/apply-kubevirt-no-hardware-support.sh` or `kubevirt/apply-kubevirt.sh` as appropriate
 - Apply `vm/containerdisk.yaml` to create the 1vCPU/1Gi RAM VM as described below
+  - Remember to edit the cloudInitNoCloud cloud-config with your own root password and SSH key
 
 ## No hardware virtualization support?
 - Run these commands before installing KubeVirt:
